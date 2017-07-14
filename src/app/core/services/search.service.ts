@@ -20,7 +20,7 @@ export interface ISearchResultItem  {
 export class SearchService {
 
     private static readonly apiUrl =
-        "https://api.stackexchange.com/2.2/search?pagesize=20&order=desc&sort=activity&site=stackoverflow&intitle=";
+        "https://api.stackexchange.com/2.2/search?pagesize=20&order=desc&sort=creation&site=stackoverflow&intitle=";
 
     constructor(private http: Http) {
 

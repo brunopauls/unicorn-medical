@@ -1,4 +1,4 @@
-<div *ngIf="typescript_fragen" class="unicorn-container">
+<div *ngIf="typescript_fragen_loaded" class="unicorn-container">
   <div class="unicorn-container-title">TypeScript Fragen</div>
   <div *ngFor="let ts_frage of typescript_fragen" class="unicorn-question" (click)="openQuestion(ts_frage.link)">
     <div class="unicorn-question-title">Q: {{ts_frage.title}}</div>
@@ -16,7 +16,7 @@
   </div>
 </div>
 
-<div *ngIf="angular2_fragen" class="unicorn-container">
+<div *ngIf="angular2_fragen_loaded" class="unicorn-container">
   <div class="unicorn-container-title">Angular 2 Fragen</div>
   <div *ngFor="let a2_frage of angular2_fragen" class="unicorn-question" (click)="openQuestion(a2_frage.link)">
     <div class="unicorn-question-title">Q: {{a2_frage.title}}</div>
@@ -34,7 +34,7 @@
   </div>
 </div>
 
-<div *ngIf="weather_fragen" class="unicorn-container">
+<div *ngIf="weather_fragen_loaded" class="unicorn-container">
   <div class="unicorn-container-title">Weather Fragen u. Daten</div>
   <div *ngFor="let weather of weather_general" >
     <!-- Fragen -->
