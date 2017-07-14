@@ -1,0 +1,70 @@
+.unicorn-container{
+    border: 1px solid grey;
+    background-color: #ffffff;
+    border-radius: 2px;
+
+    max-width: 28%;
+    margin: 10px;
+    float: left;
+}
+
+.unicorn-question{
+    padding: 10px;
+    font-size: 0.9em;
+    border-bottom: 1px solid #ecf0f1;
+    min-height: 80px;
+}
+
+.unicorn-question:hover{
+    background-color: #ecf0f1;
+    cursor: pointer;
+}
+
+.unicorn-question-details{
+    font-size: 0.8em;
+    bottom: 0;
+}
+.unicorn-question-detail{
+    float: left;
+    padding: 3px;
+    border-left: 1px solid #ecf0f1;
+}
+
+.unicorn-question-title{
+    color: #07C;
+
+    margin-bottom: 10px;
+}
+
+.unicorn-container-title{
+    padding: 5px;
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+
+.unicorn-weather{
+    padding: 10px;
+    font-size: 0.9em;
+    border-bottom: 1px solid #ecf0f1;
+    min-height: 80px;
+    background-color: rgba(181, 255, 205, 0.2)
+}
+.unicorn-weather:hover{
+    background-color: rgba(181, 255, 205, 0.5);
+    cursor:default
+}
+.unicorn-weather-details{
+    font-size: 0.8em;
+    bottom: 0;
+}
+.unicorn-weather-title{
+    color: #07C;
+    text-align: center;
+}
+.answered{
+    border: 1px solid #45A163;
+    color: #45A163;
+}

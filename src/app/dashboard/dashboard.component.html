@@ -1,0 +1,66 @@
+<div *ngIf="typescript_fragen" class="unicorn-container">
+  <div class="unicorn-container-title">TypeScript Fragen</div>
+  <div *ngFor="let ts_frage of typescript_fragen" class="unicorn-question" (click)="openQuestion(ts_frage.link)">
+    <div class="unicorn-question-title">Q: {{ts_frage.title}}</div>
+    <div class="unicorn-question-details">
+      <div class="unicorn-question-detail" [class.answered]="ts_frage.answer_count > 0">
+        {{ts_frage.answer_count}} answer<span *ngIf="ts_frage.answer_count != 1">s</span>
+      </div>
+      <div class="unicorn-question-detail">
+          {{ts_frage.view_count}} view<span *ngIf="ts_frage.view_count != 1">s</span>
+      </div>
+      <div class="unicorn-question-detail">
+          {{ts_frage.creation_date*1000 | date:fullDate }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="angular2_fragen" class="unicorn-container">
+  <div class="unicorn-container-title">Angular 2 Fragen</div>
+  <div *ngFor="let a2_frage of angular2_fragen" class="unicorn-question" (click)="openQuestion(a2_frage.link)">
+    <div class="unicorn-question-title">Q: {{a2_frage.title}}</div>
+    <div class="unicorn-question-details">
+      <div class="unicorn-question-detail" [class.answered]="a2_frage.answer_count > 0">
+        {{a2_frage.answer_count}} answer<span *ngIf="a2_frage.answer_count != 1">s</span>
+      </div>
+      <div class="unicorn-question-detail">
+          {{a2_frage.view_count}} view<span *ngIf="a2_frage.view_count != 1">s</span>
+      </div>
+      <div class="unicorn-question-detail">
+          {{a2_frage.creation_date*1000 | date }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="weather_fragen" class="unicorn-container">
+  <div class="unicorn-container-title">Weather Fragen u. Daten</div>
+  <div *ngFor="let weather of weather_general" >
+    <!-- Fragen -->
+    <div class="unicorn-question" (click)="openQuestion(weather.frage.link)">
+      <div class="unicorn-question-title">Q: {{weather.frage.title}}</div>
+      <div class="unicorn-question-details">
+        <div class="unicorn-question-detail" [class.answered]="weather.frage.answer_count > 0">
+          {{weather.frage.answer_count}} answer<span *ngIf="weather.frage.answer_count != 1">s</span>
+        </div>
+        <div class="unicorn-question-detail">
+          {{weather.frage.view_count}} view<span *ngIf="weather.frage.view_count != 1">s</span>
+        </div>
+        <div class="unicorn-question-detail">
+          {{weather.frage.creation_date*1000 | date }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Daten -->
+    <div class="unicorn-weather">
+      <div class="unicorn-weather-title">Wetter Daten am {{weather.info.Datum}}</div>
+      <div class="unicorn-weather-details">
+        Temperatur: {{weather.info['Temp. A.']}}°C<br>
+        Feuchte: {{weather.info['Feuchte A.']}}%<br>
+        Regen: {{weather.info['Regen']}}mm
+      </div>
+    </div>
+  </div>
+</div>
